@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Open a support ticket
+    url: https://support.newrelic.com/
+    about: Get help installing, deploying or troubleshooting New Relic products. Our support team is here to help!
+
+  - name: Request a feature
+    url: https://support.newrelic.com/
+    about: Request a missing feature in the New Relic experience.
