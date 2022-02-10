@@ -1,0 +1,90 @@
+name: Bug Report
+description: Report a bug
+labels: ["kind/bug", "triage/pending"]
+assignees:
+  - newrelic/coreint
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        Please note that we use github issues to track and triage already identified bugs in the code.
+        This provides a way for developers from the New Relic community to notify us of unexpected behavior of the code. We expect community members which report bugs through Github to be able to compile the source code and test the produced binary.
+
+        If you are not a developer, or if you are having trouble identifying, isolating, or reproducing an issue, please reach out to our support team, which is better equipped to help you in that regard:
+        Visit https://support.newrelic.com/
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Reporter checklist
+      options:
+        - label: I am able to reproduce the bug with the latest version of the code present in this repository
+          required: true
+        - label: I am able to install and run a development version of the code present in this repository
+          required: true
+        - label: I have gathered debug logs for the moment when the problem happened
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What were you expecting to happen?
+
+  - type: input
+    id: env-os
+    attributes:
+      label: OS Information
+      placeholder: Ubuntu 20.04, Windows 2022...
+    validations:
+      required: true
+  - type: input
+    id: env-service
+    attributes:
+      label: Affected service
+      placeholder: MySQL 8, Postgres 12, NGINX 1.21, Kubernetes 1.22...
+    validations:
+      required: true
+  - type: input
+    id: env-platform
+    attributes:
+      label: Platform and version
+      placeholder: Docker, Kubernetes 1.22, ECS, Fargate...
+  - type: textarea
+    id: env-extra
+    attributes:
+      label: Any other details you find relevant
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction instructions
+      description: Please describe the smallest and simplest environment where this can be reproduced
+      placeholder: |
+        1. Set up ...
+        2. Configure ...
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration file
+      description: Configuration file used to reproduce the problem. This will be automatically formatted as YAML, so no need for backticks.
+      render: yaml
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: true
